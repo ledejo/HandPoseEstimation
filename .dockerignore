@@ -1,0 +1,23 @@
+# virtuelle Umgebung
+.venv
+venv/
+venv3.11
+
+# Bytecode / Cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Git & CI
+.git
+.github
+.gitignore
+
+# Sonstiges
+.DS_Store
+.env
+*.log
+
+# Lokale Datenordner (werden zur Laufzeit gemountet oder generiert)
+data/
+notebooks/

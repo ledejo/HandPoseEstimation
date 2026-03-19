@@ -1,0 +1,57 @@
+app:
+  allowed_origins:
+  - http://localhost:5173
+  - http://127.0.0.1:5173
+  logging_config: configs/logging.yaml
+  logging_output_dir: logs
+camera:
+  camera_type: 0
+  target_fps: 30
+  retry_attempts: 4
+  retry_delay_sec: 0.5
+  recording_dir_production: data/01_raw/production
+  recording_dir_training: data/01_raw/training
+aruco_calibration:
+  marker_dict: DICT_4X4_50
+  min_markers: 4
+  output_size: 600
+  margin: 50
+preprocessing:
+  frame_extraction:
+    every_nth_frame: 1
+    supported_video_formats:
+    - .mp4
+    - .mov
+    supported_frame_formats:
+    - .png
+    - .jpg
+  keypoints_dir_production: data/03_processed/keypoints/production
+  keypoints_dir_training: data/03_processed/keypoints/training
+  features_dir_production: data/03_processed/features/production
+  features_dir_training: data/03_processed/features/training
+ml_pipeline:
+  models:
+    enable_hmm: true
+    enable_vae: false
+    enable_dbscan: true
+    enable_calibration: false
+  column_names:
+    frame_column: Frame
+    frames_column: Frames
+    is_anomaly_column: is_anomaly
+  file_formats:
+    csv_extension: .csv
+    video_extension: .mp4
+    model_extension: .pkl
+    pytorch_extension: .pth
+postprocessing:
+  analysed_videos_dir: data/02_intermediate/analysed_videos
+  extracted_frames_dir: data/02_intermediate/frames
+  output_csv_dir: data/05_results/metrics_csv
+  plots_dir: data/05_results/plots
+  kpi_settings:
+    default_fps: 30
+  plot_filenames:
+    hmm: hmm_{run_name}.jpg
+    vae: vae_{run_name}.jpg
+    dbscan: dbscan_{run_name}.jpg

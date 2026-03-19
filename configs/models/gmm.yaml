@@ -1,0 +1,36 @@
+# =============================================================================
+# GMM CONFIGURATION
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. PATHS
+# -----------------------------------------------------------------------------
+paths:
+  raw_data_dir: "data/03_processed/keypoints/training"
+
+# -----------------------------------------------------------------------------
+# 2. MODEL PARAMETERS
+# -----------------------------------------------------------------------------
+# Anzahl der zu findenden Cluster (ROIs)
+n_components: 4
+
+# Kovarianzmodell: full | tied | diag | spherical
+covariance_type: "full"
+
+# Seed für Reproduzierbarkeit
+random_state: 83376
+
+# Anzahl Initialisierungen (beste Lösung wird gewählt)
+n_init: 3
+
+# Maximale Anzahl EM-Iterationen
+max_iter: 400
+
+# Numerische Stabilisierung der Kovarianz
+reg_covar: 0.0005
+
+# Initialisierungsmodus: kmeans | k-means++ | random | random_from_data
+init_params: "kmeans"
+
+# Wie viele Frames pro erkanntem Griff extrahiert werden
+frames_to_take: 5

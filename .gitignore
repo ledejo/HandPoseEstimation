@@ -1,0 +1,56 @@
+# Virtuelle Umgebungen
+.venv/
+venv/
+env/
+venv3.11/
+
+# Python-Cache, Build & Verteilung
+__pycache__/
+*.py[cod]
+*.pyc
+*$py.class
+*.egg-info/
+build/
+dist/
+
+# IDE & Entwicklungstools
+.vscode/
+.idea/
+*.swp
+*.swo
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+
+# Testabdeckung & Reports
+.coverage
+htmlcov/
+.noseresults
+nosetests.xml
+
+# Systemdateien
+.DS_Store
+Thumbs.db
+
+# Umgebungsvariablen & Secrets
+.env
+.env.*
+
+# ==========================================
+# Projektspezifische Daten (Data Pipeline)
+# ==========================================
+
+# Rohdaten & Videoaufnahmen
+data/raw_videos/*.mp4
+data/01_raw/
+
+# Zwischenschritte & Prozessierte Daten
+data/02_intermediate
+data/03_processed/features/production/
+data/03_processed/keypoints/production/
+
+# Ergebnisse
+data/05_results/
+data/prod/
+*.mp4
+*.log

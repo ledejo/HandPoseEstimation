@@ -1,0 +1,62 @@
+
+[tool.poetry]
+name = "handpose-estimation"
+version = "0.1.0"
+description = "Hand Pose Estimation Project"
+authors = ["... <email@example.com>"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/Lu1sTV/HandPoseEstimation"
+packages = [
+	{ include = "handpose", from = "src" }
+]
+
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+numpy = "*"
+pandas = "2.3.3"
+matplotlib = "*"
+joblib = "1.5.2"
+hmmlearn = "0.3.3"
+torch = "2.2.0"
+optuna = "4.6.0"
+mediapipe = "0.10.21"
+streamlit = "1.51.0"
+streamlit_autorefresh = "1.0.1"
+opencv-python = "*"
+pillow = "*"
+scikit-learn = "*"
+pyyaml = "^6.0.3"
+pydantic = "^2.12.5"
+pytest = "^9.0.2"
+fastapi = "^0.135.0"
+uvicorn = "^0.41.0"
+gradio = "^6.8.0"
+python-multipart = "^0.0.22"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "7.0.0"
+mypy = "1.18.2"
+black = "25.9.0"
+ruff = "0.14.2"
+types-pyyaml = "^6.0.12.20250915"
+pre-commit = "^4.5.1"
+notebook = "^7.5.4"
+ipykernel = "^7.2.0"
+
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "mediapipe.*"
+ignore_missing_imports = true
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

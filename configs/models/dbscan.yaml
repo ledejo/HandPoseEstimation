@@ -1,0 +1,24 @@
+﻿# =============================================================================
+# DBSCAN CONFIGURATION
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. PATHS
+# -----------------------------------------------------------------------------
+paths:
+  raw_data_dir: "data/03_processed/keypoints/training"
+
+# -----------------------------------------------------------------------------
+# 2. MODEL PARAMETERS
+# -----------------------------------------------------------------------------
+# Radius für Nachbarschaft
+eps: 0.01
+
+# Mindestanzahl Punkte für einen Cluster
+min_samples: 50
+
+# Wie viele Frames pro erkanntem Griff extrahiert werden
+frames_to_take: 5
+
+# Index des max_reach_y Features im Feature-Array
+feature_index_max_reach_y: 2
