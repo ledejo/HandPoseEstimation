@@ -1,4 +1,5 @@
 # HandPoseEstimation
+Diese Projekt ist eine Zusammenarbeit zwischen David Muth, Luis Ehrlicher, Tobias Breitschädel und Carl Jonas Lederer im Rahmen des Studiengangs Data Science und Künstliche Intelligenz an der DHBW Ravensburg. Besonderer Dank gilt Dr. Mark Schutera für die Betreuung während der Entwicklung. 
 
 Ein System zur Echtzeit-Erkennung und ML-basierten Analyse von Handbewegungen in Montageprozessen. Es extrahiert Hand-Keypoints aus Videos und wertet diese automatisch auf Prozessschritte und Anomalien aus.
 
